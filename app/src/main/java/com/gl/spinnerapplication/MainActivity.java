@@ -82,22 +82,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @return
      */
     private boolean validateView(String name, String qualification, String age){
+        boolean status = true;
         if (TextUtils.isEmpty(name)) {
             Toast.makeText(MainActivity.this,
                     "Please Enter Your Name", Toast.LENGTH_LONG).show();
             return false;
+                    "Please Enter Name", Toast.LENGTH_LONG).show();
+            status =  false;
         }
         if(TextUtils.isEmpty(qualification)){
             Toast.makeText(MainActivity.this,
                     "Please Enter Qualification", Toast.LENGTH_LONG).show();
-            return false;
+            status =  false;
         }
         if (TextUtils.isEmpty(age)){
             Toast.makeText(MainActivity.this,
                     "Please Select Age", Toast.LENGTH_LONG).show();
-            return false;
+            status =  false;
         }
-       return true;
+       return status;
     }
 
     private void saveUserDetails(){
