@@ -85,6 +85,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         boolean status = true;
         if (TextUtils.isEmpty(name)) {
             Toast.makeText(MainActivity.this,
+                    "Please Enter Your Name", Toast.LENGTH_LONG).show();
+            return false;
                     "Please Enter Name", Toast.LENGTH_LONG).show();
             status =  false;
         }
@@ -115,6 +117,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mNameLabel.getText().clear();
         mQualificationLabel.getText().clear();
         mAgeSpinner.setSelected(false);
+        mSaveDetails.setText(null);
     }
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
