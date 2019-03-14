@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private boolean validateView(String name, String qualification, String age){
         if (TextUtils.isEmpty(name)) {
             Toast.makeText(MainActivity.this,
-                    "Please Enter Name", Toast.LENGTH_LONG).show();
+                    "Please Enter Your Name", Toast.LENGTH_LONG).show();
             return false;
         }
         if(TextUtils.isEmpty(qualification)){
@@ -114,6 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mNameLabel.getText().clear();
         mQualificationLabel.getText().clear();
         mAgeSpinner.setSelected(false);
+        mSaveDetails.setText(null);
     }
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
